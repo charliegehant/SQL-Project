@@ -50,9 +50,10 @@ FROM            cte_total_paid
 > ![SQL_JOIN_top5cust_top10countries](https://user-images.githubusercontent.com/104154067/164798520-5a08c95f-285d-46d1-ab43-11c6cf190c62.png)
 
 
-## COUNTING ALL CUSTOMERS by COUNTRY & EXTRACTING TOP CUSTOMERS from TOP 10 CITIES
 
-´´´
+## Counting ALL CUSTOMERS and TOP CUSTOMERS
+
+```
 WITH 		cte_step1_q2_t9 (customer_id, 
 				 first_name, 
 				 last_name, 
@@ -99,8 +100,11 @@ INNER JOIN 	country ON city.country_id = country.country_id
 LEFT JOIN 	cte_step1_q2_t9 ON country.country = cte_step1_q2_t9.country
 GROUP BY 	country.country
 ORDER BY 	top_customer_count DESC
-´´´
+```
 
 
-##### _Query Result_:
-###### _(screenshot of 11 out of 108 rows)_
+##### _Query Result (screenshot of 11 out of 108 rows)_:
+![Screenshot 2022-04-22 at 22 43 17](https://user-images.githubusercontent.com/104154067/164800065-a6103f91-a241-4f59-b8b4-a49b1d107735.png)
+
+##### _Data re-used from Joins.md_:
+![SQL_JOIN_top5cust_top10countries](https://user-images.githubusercontent.com/104154067/164800141-b5888632-3d8a-405d-a391-bc82aba7a195.png)
