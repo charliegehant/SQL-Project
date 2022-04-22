@@ -9,12 +9,13 @@ WITH          cte_total_paid (customer_id,
                               country, 
                               city, 
                               total_amount_paid) AS                             
+
 (SELECT         A.customer_id, 
                 B.first_name, 
                 B.last_name, 
                 E.country, 
                 D.city,
-	              SUM(amount) AS total_amount_paid
+	        SUM(amount) AS total_amount_paid
 FROM            payment A
 INNER JOIN      customer B ON A.customer_id = B.customer_id
 INNER JOIN      address C ON B.address_id = C.address_id
@@ -37,6 +38,7 @@ GROUP BY        A.customer_id,
                 D.city
 ORDER BY        total_amount_paid DESC
 LIMIT           5) 
+
 SELECT AVG      (total_amount_paid) AS average_amount_paid
 FROM            cte_total_paid
 ```
