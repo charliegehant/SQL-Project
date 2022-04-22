@@ -32,3 +32,6 @@ GROUP BY 	A.customer_id, B.first_name, B.last_name, E.country, D.city
 ORDER BY 	total_paid DESC
 LIMIT 		5
 ```
+
+![SQL_JOIN_top5cust_top10countries](https://user-images.githubusercontent.com/104154067/164775413-8394a992-0662-4b8d-a5b1-9a4df2910935.png)
+
