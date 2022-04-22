@@ -14,6 +14,7 @@ ORDER BY 	count_of_customers DESC
 LIMIT 		10
 ```
 
+![SQL_JOIN_top10countries](https://user-images.githubusercontent.com/104154067/164774710-7afafa55-6431-443a-b750-11411919ea95.png)
 
 ## To find the TOP 5 CUSTOMERS of the TOP 10 CITIES
 
