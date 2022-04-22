@@ -24,7 +24,7 @@
 > - Using PostgreSQL to clean & analyse the data
 > - 15-table database (e.g.: payment, customer, inventory, etc.)
 > - Using a range of queries; ORDER BY, GROUP BY, JOIN, WHERE, HAVING
-> - Performing subqueries & using CTEs (Common Table Expressions)
+> - Performing subqueries & using Common Table Expressions (CTEs)
 > - Building a data dictionary ([view here](https://drive.google.com/file/d/11Nd0mURLddNwbHeuj6ayX_o_LySszdZF/view?usp=sharing))
 > - Creating a Tableau presentation ([view here](https://public.tableau.com/views/RockbusterPres/Story1?:language=en-GB&:display_count=n&:origin=viz_share_link))
 
