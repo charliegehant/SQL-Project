@@ -27,3 +27,8 @@
 > - Performing subqueries & using CTEs (Common Table Expressions)
 > - Building a data dictionary ([view here](https://drive.google.com/file/d/11Nd0mURLddNwbHeuj6ayX_o_LySszdZF/view?usp=sharing))
 > - Creating a Tableau presentation ([view here](https://public.tableau.com/views/RockbusterPres/Story1?:language=en-GB&:display_count=n&:origin=viz_share_link))
+
+#### ENTITY RELATIONSHIP DIAGRAM (ERD)
+
+![Screenshot 2022-04-22 at 19 58 37](https://user-images.githubusercontent.com/104154067/164777465-5b7c3893-c9cb-4e9d-a5b1-133bb6c99328.png)
+
