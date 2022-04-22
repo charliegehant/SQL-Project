@@ -17,6 +17,35 @@ LIMIT 		10
 ![SQL_JOIN_top10countries](https://user-images.githubusercontent.com/104154067/164775588-bfc39261-ae36-4066-8236-82aa753a2ea4.png)
 
 
+## To find the TOP 10 CITIES within the TOP 10 COUNTRIES
+
+```
+SELECT 		C.city, 
+		D.country,
+		COUNT(customer_id) AS count_of_customers
+FROM 		customer A
+INNER JOIN 	address B ON A.address_id = B.address_id
+INNER JOIN 	city C ON B.city_id = C.city_id
+INNER JOIN 	country D ON C.country_id = D.country_id 
+WHERE 		D.country IN ('India', 
+			      'China', 
+			      'United States', 
+			      'Japan', 
+			      'Mexico', 
+			      'Brazil', 
+			      'Russian Federation', 
+			      'Philippines', 
+			      'Turkey', 
+			      'Indonesia')
+GROUP BY 	city, 
+		country
+ORDER BY 	count_of_customers DESC
+LIMIT 		10
+```
+
+![SQL_JOIN_top10cities](https://user-images.githubusercontent.com/104154067/164776913-8836d2e3-fc67-4a42-b632-2a96cb5bef0a.png)
+
+
 ## To find the TOP 5 CUSTOMERS of the TOP 10 CITIES
 
 ```
@@ -31,8 +60,16 @@ INNER JOIN 	customer B ON A.customer_id = B.customer_id
 INNER JOIN 	address C ON B.address_id = C.address_id
 INNER JOIN 	city D ON C.city_id = D.city_id
 INNER JOIN 	country E ON D.country_id = E.country_id 
-WHERE 		E.country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
-AND 		D.city IN ('Aurora', 'Tokat', 'Tarsus', 'Atlixco', 'Emeishan', 'Pontianak', 'Shimoga', 'Aparecida de Goinia', 'Zalantun', 'Taguig')
+WHERE 		D.city IN ('Aurora', 
+			   'Tokat', 
+			   'Tarsus', 
+			   'Atlixco', 
+			   'Emeishan', 
+			   'Pontianak', 
+			   'Shimoga', 
+			   'Aparecida de Goinia', 
+			   'Zalantun', 
+			   'Taguig')
 GROUP BY 	A.customer_id, 
 		B.first_name, 
 		B.last_name, 
