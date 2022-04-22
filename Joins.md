@@ -14,12 +14,17 @@ ORDER BY 	count_of_customers DESC
 LIMIT 		10
 ```
 
-![SQL_JOIN_top10countries](https://user-images.githubusercontent.com/104154067/164774710-7afafa55-6431-443a-b750-11411919ea95.png)
+![SQL_JOIN_top10countries](https://user-images.githubusercontent.com/104154067/164775588-bfc39261-ae36-4066-8236-82aa753a2ea4.png)
+
 
 ## To find the TOP 5 CUSTOMERS of the TOP 10 CITIES
 
 ```
-SELECT 		A.customer_id, B.first_name, B.last_name, E.country, D.city,
+SELECT 		A.customer_id, 
+		B.first_name, 
+		B.last_name, 
+		E.country, 
+		D.city,
 		SUM(amount) AS total_paid
 FROM 		payment A
 INNER JOIN 	customer B ON A.customer_id = B.customer_id
@@ -28,7 +33,11 @@ INNER JOIN 	city D ON C.city_id = D.city_id
 INNER JOIN 	country E ON D.country_id = E.country_id 
 WHERE 		E.country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
 AND 		D.city IN ('Aurora', 'Tokat', 'Tarsus', 'Atlixco', 'Emeishan', 'Pontianak', 'Shimoga', 'Aparecida de Goinia', 'Zalantun', 'Taguig')
-GROUP BY 	A.customer_id, B.first_name, B.last_name, E.country, D.city
+GROUP BY 	A.customer_id, 
+		B.first_name, 
+		B.last_name, 
+		E.country, 
+		D.city
 ORDER BY 	total_paid DESC
 LIMIT 		5
 ```
