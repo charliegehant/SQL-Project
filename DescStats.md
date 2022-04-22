@@ -1,5 +1,5 @@
 # DESCRIPTIVE STATISTICS 
-## For the FILM TABLE
+## Of the FILM TABLE
 
 ```
 SELECT    COUNT(film_id) AS count_film_id,
@@ -39,12 +39,15 @@ SELECT    COUNT(film_id) AS count_film_id,
           MAX(replacement_cost) AS max_replacement_cost,
 
           COUNT(rating) AS count_rating,
+          MODE() WITHIN GROUP (ORDER BY rating) AS modal_rating
 
-MODE() WITHIN GROUP (ORDER BY rating) AS modal_rating
 FROM film
 ```
 
-## For the CUSTOMERS TABLE
+![SQL_descstats_film](https://user-images.githubusercontent.com/104154067/164792720-5b1815cf-446e-4710-8fa0-a29f4ab2499a.png)
+
+
+## Of the CUSTOMERS TABLE
 
 ```
 SELECT    COUNT(customer_id) AS count_customer_id,
@@ -66,7 +69,10 @@ SELECT    COUNT(customer_id) AS count_customer_id,
           AVG(address_id) AS avg_address_id,
 
           COUNT(activebool) AS count_activebool,
-
-MODE() WITHIN GROUP (ORDER BY activebool) AS modal_activebool
+          MODE() WITHIN GROUP (ORDER BY activebool) AS modal_activebool
+          
 FROM customer
 ```
+
+![SQL_descstats_customers](https://user-images.githubusercontent.com/104154067/164792916-de75407b-70b0-4066-b8e4-d4059f905f5b.png)
+
