@@ -1,7 +1,7 @@
-____________________________________________
->>> DESCRIPTIVE STATISTICS of the FILM TABLE
-____________________________________________
+# DESCRIPTIVE STATISTICS 
+## For the FILM TABLE
 
+```
 SELECT    COUNT(film_id) AS count_film_id,
           MIN(film_id) AS min_film_id,
           MAX(film_id) AS max_film_id,
@@ -42,11 +42,11 @@ SELECT    COUNT(film_id) AS count_film_id,
 
 MODE() WITHIN GROUP (ORDER BY rating) AS modal_rating
 FROM film
+```
 
-_________________________________________________
->>> DESCRIPTIVE STATISTICS of the CUSTOMERS TABLE
-_________________________________________________
+## For the CUSTOMERS TABLE
 
+```
 SELECT    COUNT(customer_id) AS count_customer_id,
           MIN(customer_id) AS min_customer_id,
           MAX(customer_id) AS max_customer_id,
@@ -69,3 +69,4 @@ SELECT    COUNT(customer_id) AS count_customer_id,
 
 MODE() WITHIN GROUP (ORDER BY activebool) AS modal_activebool
 FROM customer
+```
