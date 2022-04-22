@@ -1,5 +1,6 @@
 # COMMON TABLE EXPRESSIONS
-## Re-writing queries with CTE
+
+## Finding the AVERAGE AMOUNT PAID by the TOP 5 CUSTOMERS of the TOP 10 CITIES
 
 ```
 WITH          cte_total_paid (customer_id, 
@@ -39,3 +40,11 @@ LIMIT           5)
 SELECT AVG      (total_amount_paid) AS average_amount_paid
 FROM            cte_total_paid
 ```
+
+##### _Query Result_:
+> ![Screenshot 2022-04-22 at 22 29 48](https://user-images.githubusercontent.com/104154067/164798414-d5fbf821-5481-481e-92cb-ef648eeac1bd.png)
+
+##### _Data re-used from Joins.md_:
+> ![SQL_JOIN_top5cust_top10countries](https://user-images.githubusercontent.com/104154067/164798520-5a08c95f-285d-46d1-ab43-11c6cf190c62.png)
+
+
